@@ -6,10 +6,8 @@ export default {};
 </script>
 <style>
 .vue {
-	width: 100%;
+	background-size: contain;
 	height: 100vh;
-	background-size: cover;
-	background-repeat: no-repeat;
 	background-image: url(https://blog.vueschool.io/wp-content/uploads/2022/11/Frame-20.jpg);
 	padding-top: 100px;
 }

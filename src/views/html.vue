@@ -6,10 +6,8 @@ export default {};
 </script>
 <style>
 .html {
-	width: 100%;
+	background-size: contain;
 	height: 100vh;
-	background-size: cover;
-	background-repeat: no-repeat;
 	background-image: url(https://artemir.ro/wp-content/uploads/2022/05/maquetacion-email-html.png);
 	padding-top: 100px;
 }
