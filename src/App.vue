@@ -42,7 +42,11 @@ import { RouterLink, RouterView } from "vue-router";
 		</div>
 	</nav>
 
-	<RouterView />
+	<router-view v-slot="{ Component }">
+		<transition name="router" mode="out-in" appear>
+			<component :is="Component"></component>
+		</transition>
+	</router-view>
 </template>
 <style scoped>
 nav {
@@ -58,6 +62,18 @@ nav {
 	left: 6px;
 	border-radius: 5px;
 	background-color: #fff;
+}
+.router-enter-from {
+	opacity: 0;
+	transform: translateY(100px);
+}
+.router-enter-active,
+.router-leave-active {
+	transition: all 0.2s ease-out;
+}
+.router-leave-to {
+	opacity: 0;
+	transform: translateY(100px);
 }
 nav img {
 	width: 60px;
